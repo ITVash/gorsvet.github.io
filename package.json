@@ -1,0 +1,30 @@
+{
+  "name": "dongorsvet",
+  "version": "1.0.0",
+  "description": "This site DPR gorsvet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITVash/gorsvet.github.io.git"
+  },
+  "keywords": [
+    "gorsvet",
+    "DPR"
+  ],
+  "author": "ITVash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ITVash/gorsvet.github.io/issues"
+  },
+  "homepage": "https://github.com/ITVash/gorsvet.github.io#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp-less": "^4.0.1"
+  }
+}
