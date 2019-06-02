@@ -1,0 +1,32 @@
+@colorTitle: #313131;
+@colorText: #616161;
+@c1: #fd5f46;
+@c2: #38c694;
+@c3: #b27cf4;
+@c4: #feb860;
+.poppins(@c: @colorText; @fz: 15px; @fw: 400) {
+	font-family: 'Poppins', sans-serif;
+	font-size: @fz;
+	color: @c;
+	font-weight: @fw;
+}
+.libre(@c: @colorTitle; @fz: 40px; @fw: 700) {
+	font-family: 'Libre Baskerville', serif;
+	font-size: @fz;
+	color: @c;
+	font-weight: @fw;
+}
+.baf(@cont: '') {
+	content: @cont;
+	position: absolute;
+	top: 0;	
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.bafs(@cont: '') {
+	content: @cont;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
