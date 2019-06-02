@@ -69,7 +69,11 @@ html img {
   padding: 0 15px;
   margin: 0 auto;
 }
+.nav__brend_logo {
+  text-align: center;
+}
 .nav__brend_logo h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+  text-align: center;
 }
