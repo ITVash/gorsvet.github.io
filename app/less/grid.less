@@ -92,6 +92,13 @@ img {
 .justify-xl(@pos) {
 	.media-xl({justify-content: @pos;});
 }
+.adaptiv(@col1, @col2, @col3, @col4, @col5, @column: 12) {
+	.col(@col1, @column);
+	.col-sm(@col2, @column);
+	.col-md(@col3, @column);
+	.col-lg(@col4, @column);
+	.col-xl(@col5, @column);
+}
 .col(@cols, @column: 12) {
 	position: relative;
 	width: 100%;

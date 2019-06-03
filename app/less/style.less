@@ -1,31 +1,25 @@
 @import 'grid';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800|Open+Sans+Condensed:300,700&display=swap&subset=cyrillic,cyrillic-ext');
 @import "nav";
+body {
+	box-sizing: border-box;
+}
 .title() {
   font-family: 'Montserrat', sans-serif;
 }
 .text() {
   font-family: 'Open Sans Condensed', sans-serif;
 }
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  img {
-    outline: none;
-    width: auto;
-  }
+img {
+  outline: none;
 }
 .container {
-  width: 1170px;
-  padding: 0 15px;
-  margin: 0 auto;
+  .container();
 }
-.nav__brend_logo {
-  text-align: center;
-  & h1 {
-    .title();
-    font-weight: 400;
-    text-align: center;
-  }
+.row {
+  .row();
+}
+
+header {
+  padding-top: 100px;
 }
