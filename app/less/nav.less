@@ -12,6 +12,7 @@
 }
 .nav {
   //position: fixed !important;
+  transition: all 1s;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -24,6 +25,7 @@
     justify-content: space-around;  
     &_logo {
       .adaptiv(2,2,2,2,2);
+      transition: all 0.5s;
       img{ width: 70%;}
     }
     &_slogan {
@@ -36,6 +38,7 @@
       .adaptiv(7,7,7,7,7);
     }
     &_telephon {
+      transition: all 0.5s;
       .title();
       display: flex;
       justify-content: flex-end;
@@ -52,10 +55,12 @@
     }
   }
   &__menu {
+    transition: all 1s;
     .row {
       justify-content: center;
     }
     .mobile {
+      transition: all 1s;
       display: flex;
       justify-content: center;
       .adaptiv(7,7,7,7,7);
@@ -63,22 +68,61 @@
     }
     width: 100%;
     background-color: #fcf6d6;
+    box-shadow: 0 0 10px rgba(227,222,196,1);
     display: block;
     &_list {
       display: flex;
       justify-content: space-around;
       width: 100%;
       padding-left: 0;
+      margin: 0;
       &_item {
         //padding: 0 15px;
         display: flex;
+        align-items: center;
         a {
           color: #373737;
           text-decoration: none;
           .text();
           font-weight: 700;
           display: block;
-          line-height: 15px;
+          line-height: 50px;
+          position: relative;
+          z-index: 0;
+          &:before {
+            content: '';
+            position: absolute;
+            border-top: 2px solid #000;
+            z-index: 1;
+            height: 2px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 0.5s ease;
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            border-bottom: 2px solid #000;
+            z-index: 1;
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 0.5s ease;
+          }
+          &:hover {
+            &:before {
+              opacity: 1;
+              transform: translateY(10px);
+            }
+            &:after {
+              opacity: 1;
+              transform: translateY(-10px);
+            }
+          }
         }
       }
     }
@@ -86,13 +130,21 @@
 }
 .fixed {
   position: fixed !important;
+  transition: all 1s;
+  animation: anim_menu 1s infinite;
+  .nav__menu {
+    margin-top: -21px;
+    .mobile {
+      height: 70px;      
+    }
+  }
   .nav__brand {
     &_logo {
       img {
         width: 70%;
       }
       position: absolute;
-      margin-top: -15px;
+      margin-top: -21px;
     }
     &_slogan {
       display: none;
@@ -101,8 +153,28 @@
       position: absolute;
       right: 0;
       top: 50% !important;
-      margin-top: 23px;
+      margin-top: 13px;
       transform: translateY(-50%);
+    }
+  }
+}
+@keyframes anim_menu {
+  0% {
+    .nav__menu {
+      margin-top: -100px;
+    }
+    .nav__brand {
+      &_logo {
+        margin-top: -21px;
+      }
+      &_telephon {
+        margin-top: 13px;
+      }
+    }
+  }
+  100% {
+    .nav__menu {
+      margin-top: -100px;
     }
   }
 }
