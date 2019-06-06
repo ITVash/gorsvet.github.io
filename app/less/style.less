@@ -70,3 +70,40 @@ img {
     .adaptiv(6,6,6,6,6);
   }
 }
+.footer {
+  background-color: #000000;
+  .text();
+  color: @yellow;
+  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  .row {
+    align-items: center;
+  }
+  &__logo {
+    .adaptiv(4,4,4,4,4);
+    position: relative;
+    display: flex;
+    align-items: center;
+    img {
+      object-fit: cover;
+      width: 70%;
+    }
+    p {
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+  &__info {
+    .adaptiv(4,4,4,4,4);
+    p {
+      padding: 0;
+      margin: 0;
+      a {
+        color: @yellow;
+      }
+    }
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+}
