@@ -70,13 +70,48 @@ img {
     .adaptiv(6,6,6,6,6);
   }
 }
+.office {
+  background-color: @yellow;
+  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  text-align: center;
+  .text();
+  color: #111;
+  padding: 20px 0;
+  .row {
+    justify-content: center;
+  }
+  &__hours {
+    .adaptiv(3,3,3,3,3);
+    h3 {
+      text-transform: uppercase;
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+    }
+    p.clock {
+      font-size: 34px;
+    }
+  }
+}
 .footer {
+  padding: 20px 0;
   background-color: #000000;
+  .row:nth-child(2) {
+    justify-content: center;
+  }
+  a {
+    color: @yellow;
+    text-decoration: none;
+  }
   .text();
   color: @yellow;
   box-shadow: 0 0 10px rgba(0,0,0,.6);
   .row {
     align-items: center;
+    justify-content: space-between;
   }
   &__logo {
     .adaptiv(4,4,4,4,4);
