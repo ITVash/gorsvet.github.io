@@ -106,6 +106,21 @@ img {
   a {
     color: @yellow;
     text-decoration: none;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      border-bottom: 2px solid @yellow;
+      bottom: 0;
+      left: 0;
+      right: 100%;
+      transition: all .5s ease;
+    }
+    &:hover {
+      &:before {
+        right: 0;
+      }
+    }
   }
   .text();
   color: @yellow;
