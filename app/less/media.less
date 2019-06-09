@@ -7,6 +7,9 @@
       font-size: 18px;
     }
   }
+  .mobile {
+    margin-left: 0 !important;
+  }
   .nav__brand_slogan {
     text-align: center;
   }
@@ -15,6 +18,11 @@
   }
   .nav__brand_telephon {
     justify-content: center;
+  }
+  .fixed {
+    .mobile {
+      margin-left: 0;
+    }
   }
 }
 @media screen and (min-width: @sm) {
@@ -43,7 +51,7 @@
     text-align: left;
   }
   .nav__brand_telephon {
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 @media screen and (min-width: @lg) {
