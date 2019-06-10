@@ -148,7 +148,7 @@
   }
   .nav__brand {
     &_logo {
-      .adaptiv(12,12,2,2,2);
+      .adaptiv(2,2,2,2,2);
       img {
         width: 110px;
       }
@@ -157,7 +157,7 @@
       display: none;
     }
     &_telephon {
-      .adaptiv(12,12,3,4,3);
+      .adaptiv(4,4,3,4,3);
       justify-content: flex-end;
     }
   }
@@ -188,15 +188,69 @@
 	}
 }
 .nav {
-  &.hidden-xs {}
-  &.hidden-sm {}
-  &.hidden-md {
+  &.hidden-xs {
+    .nav__menu_btn {
+      .mhd-xs({display: block !important;});
+    }
     .mobile {
-      .mhd-md({display: none;});
+      .mhd-xs({.hd();});
     }
   }
-  &.hidden-lg {}
-  &.hidden-xl {}
+  &.hidden-sm {
+    .nav__menu_btn {
+      .mhd-sm({display: block !important;});
+    }
+    .mobile {
+      .mhd-sm({.hd();});
+    }
+  }
+  &.hidden-md {
+    .nav__menu_btn {
+      .mhd-md({display: block !important;});
+    }
+    .mobile {
+      .mhd-md({.hd();});
+    }
+  }
+  &.hidden-lg {
+    .nav__menu_btn {
+      .mhd-lg({display: block !important;});
+    }
+    .mobile {
+      .mhd-lg({.hd();});
+    }
+  }
+  &.hidden-xl {
+    .nav__menu_btn {
+      .mhd-xl({display: block !important;});
+    }
+    .mobile {
+      .mhd-xl({.hd();});
+    }
+  }
+}
+.hd() {
+  z-index: 9999;
+  position: absolute;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgba(252, 246, 214, 1);
+  justify-content: center;
+  right: -100%;
+  width: 300px;
+  bottom: 0;
+  top: 0;
+  ul {
+    width: 250px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    li {
+      width: 200px;
+      text-align: center;
+      justify-content: center;
+    }
+  }
 }
 .nav {
   &.activ {
@@ -217,7 +271,7 @@
   &__menu {
     &_btn {
       margin: 5px 15px;
-      //display: none;
+      display: none;
       background: transparent;
       outline: none !important;
       border: 2px solid rgba(0,0,0, .4);
@@ -268,6 +322,16 @@
           transform-origin: right;	
         }
       }
+    }
+  }
+}
+.nav {
+  .show {
+   right: -100px !important;
+    ul {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
     }
   }
 }
