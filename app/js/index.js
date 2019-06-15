@@ -16,13 +16,12 @@ btn.addEventListener('click', e => {
     nav__menu_mobile.classList.remove('show');
     setTimeout( () => {
       menu.append(nav__menu_mobile);
-    }, 1010);
+    }, 510);
   } else {
     nav__menu.append(menuCol);
     setTimeout( () => {
       nav__menu_mobile.classList.add('show');
-    }, 10);
-    
+    }, 10);    
   }
 });
 window.addEventListener('scroll', () => {
