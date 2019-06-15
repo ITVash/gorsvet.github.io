@@ -57,9 +57,12 @@
     }
   }
   &__menu {
-    transition: all 1s;
+    transition: all 1s ease-in;
+    position: relative;
+    z-index: 9999;
     .row {
       justify-content: center;
+      transition: all .5s ease;
     }
     .mobile {
       transition: all 1s;
@@ -67,6 +70,7 @@
       justify-content: center;
       .adaptiv(7,7,7,6,7);
       margin-left: -90px;
+      //position: relative;      
     }
     width: 100%;
     background-color: #fcf6d6;
@@ -141,14 +145,16 @@
   }
   .nav__menu {
     background-color: rgba(252, 246, 214, .9);
+    transition: all 1s ease-in;
     .mobile {
       margin-left: 0;
-      .adaptiv(12,12,6,6,7);     
+      .adaptiv(12,12,6,6,7);
+      //z-index: -1 !important;
     }
   }
   .nav__brand {
     &_logo {
-      .adaptiv(2,2,2,2,2);
+      .adaptiv(4,4,3,2,2);
       img {
         width: 110px;
       }
@@ -157,7 +163,7 @@
       display: none;
     }
     &_telephon {
-      .adaptiv(4,4,3,4,3);
+      .adaptiv(5,4,3,4,3);
       justify-content: flex-end;
     }
   }
@@ -230,13 +236,16 @@
   }
 }
 .hd() {
-  z-index: 9999;
+  //z-index: -9999;
+  z-index: -1 !important;
   position: absolute;
   flex-direction: column;
   height: 100vh;
   background-color: rgba(252, 246, 214, 1);
   justify-content: center;
-  right: -100%;
+  //right: -95px;
+  right: 0;
+  transform: translateX(200%);
   width: 300px;
   bottom: 0;
   top: 0;
@@ -327,7 +336,16 @@
 }
 .nav {
   .show {
-   right: -100px !important;
+   //right: -100px !important;
+   transform: translateX(0%) !important;
+   z-index: -1 !important;
+   &:target {
+     section,
+     header,
+     footer {
+       transform: translateX(-30%);
+     }
+   }
     ul {
       flex-direction: column;
       text-align: center;
