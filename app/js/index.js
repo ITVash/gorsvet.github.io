@@ -8,7 +8,7 @@ const nav__menu = document.querySelector('.nav__menu');
 const nav__menu_mobile = document.querySelector('.nav__menu .mobile');
 const btn = document.querySelector('.nav__menu_btn');
 const menuCol = document.querySelector('.nav__menu .container .row .mobile');
-btn.addEventListener('click', e => {
+/*btn.addEventListener('click', e => {
   e.preventDefault();
   navz.classList.toggle('activ');
   //menuCol.classList.toggle('show');
@@ -36,5 +36,38 @@ window.addEventListener('scroll', () => {
     nav_brand.prepend(logo);
     menu.append(phone);
     nav_brand.appendChild(phone);
+  }
+});
+*/
+const btn1 = document.querySelector('.nav__btn');
+const mobM = document.querySelector('.nav__mobile');
+const link = document.querySelector('.nav__mobile ul li a');
+const sec = document.querySelectorAll('section');
+const foot = document.querySelector('footer');
+
+
+btn1.addEventListener('click', e => {
+  e.preventDefault();
+  navz.classList.toggle('activ');
+  mobM.classList.toggle('show');
+  foot.classList.toggle('goleft');
+  for (let i = 0; i < sec.length; i++) {    
+    sec[i].classList.toggle('goleft');
+  }
+});
+link.addEventListener('click', e => {
+  e.preventDefault();
+  navz.classList.toggle('activ');
+  mobM.classList.toggle('show');
+  foot.classList.toggle('goleft');
+  for (let i = 0; i < sec.length; i++) {    
+    sec[i].classList.toggle('goleft');
+  }
+});
+window.addEventListener('scroll', () => {
+  if (this.scrollY >= 140) {
+    navz.classList.add('fixed');
+  } else if (this.scrollY <= 139) {
+    navz.classList.remove('fixed');
   }
 });

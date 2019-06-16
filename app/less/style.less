@@ -1,7 +1,7 @@
 @import 'grid';
 @import 'var';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800|Open+Sans+Condensed:300,700&display=swap&subset=cyrillic,cyrillic-ext');
-@import "nav";
+@import "navs";
 html {
   overflow-x: hidden;
 }
@@ -265,6 +265,16 @@ img {
     justify-content: left;
   }
 }
+
+section,
+footer {
+  position: relative;
+  transition: all .5s linear;
+}
+.goleft {
+  transform: translateX(-30%);
+}
+
 @keyframes anilink {
   0% {
     right: 0px; 
