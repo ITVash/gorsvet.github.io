@@ -255,6 +255,69 @@ img {
     }
   }
 }
+.service {
+  &__block-list {
+    .adaptiv(12,12,12,4,4);
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      text-decoration: none;
+      color: #373737;
+      border: 1px solid rgba(55, 55, 55, .6);
+      border-radius: .25rem;
+      padding: 0.5rem 1rem;
+      margin-top: 20px;
+      display: block;
+      text-align: center;
+      width: 150px !important;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      &:before {
+        content: '';
+        position: absolute;
+        background-color: @yellow;
+        border-radius: .25rem;
+        right: -50px;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        transition: all .5s linear;
+        color: #373737;
+        z-index: -1;
+        transform: skewX(45deg);
+      }
+      &:hover {
+        &:before {
+          left: -50px;
+          width: 150%;
+        }
+      }
+    }
+    &_img {
+      .adaptiv(12,12,12,3,3);
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &_text {
+      .adaptiv(12,12,12,9,9);
+      position: relative;
+      p {
+        padding:0;
+        margin: 5px 0;
+      }
+      h4 {
+        span {
+          display: block;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
 .office {
   background-color: @yellow;
   box-shadow: 0 0 5px rgba(0,0,0,.3);

@@ -11,10 +11,27 @@ const menuCol = document.querySelector('.nav__menu .container .row .mobile');
 
 const btn1 = document.querySelector('.nav__btn');
 const mobM = document.querySelector('.nav__mobile');
-//const link = document.querySelector('.nav__mobile .nav__mobile_list .nav__mobile_list_item a');
 const sec = document.querySelectorAll('section');
 const foot = document.querySelector('footer');
+const messIco = document.querySelector('.message__icon');
+const mess = document.querySelector('.message');
 
+messIco.addEventListener('click', e => {
+  e.preventDefault();
+  mess.classList.toggle('open');
+  const phone = document.querySelector('#phone');
+  phone.addEventListener('focus', e => {
+    e.value = "text";
+  });
+  const send = document.querySelector('#send');
+  send.addEventListener('click', e => {
+    mess.classList.toggle('open');
+  });
+});
+
+window.addEventListener('load' , () => {
+  if (mess.focus() === false) mess.classList.toggle('open');
+});
 
 btn1.addEventListener('click', e => {
   e.preventDefault();
